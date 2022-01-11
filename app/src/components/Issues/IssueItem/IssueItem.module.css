@@ -1,0 +1,20 @@
+.issuesEntry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e1e4e8;
+    padding: 12px 8px;
+}
+
+.issuesEntry:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.issuesEntry:hover {
+    background: #f5f8fa;
+}
+
+.issuesEntryTitleContainer {
+    display: flex;
+}

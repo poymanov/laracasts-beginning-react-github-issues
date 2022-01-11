@@ -1,0 +1,15 @@
+.commentsCountContainer {
+    display: flex;
+    text-decoration: none;
+    color: #374151;
+}
+
+.commentsCountContainer:hover {
+    color: #0265d6;
+}
+
+.commentsCount {
+    text-decoration: none;
+    margin-left: 4px;
+    font-size: 14px;
+}

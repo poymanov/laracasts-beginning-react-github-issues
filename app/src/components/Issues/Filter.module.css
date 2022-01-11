@@ -1,0 +1,25 @@
+.openClosedButtons {
+    margin-top: 12px;
+}
+
+.openClosedButtons button {
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.openClosedButtons button:last-child {
+    margin-left: 14px;
+}
+
+.openClosedButtons span {
+    margin-left: 4px;
+    font-size: 14px;
+}
+
+.fontBold {
+    font-weight: bold;
+}

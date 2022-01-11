@@ -1,0 +1,8 @@
+.issuesHeading {
+    background: #f5f8fa;
+    padding: 15px 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid #e1e4e8;
+    border-bottom: none;
+}
