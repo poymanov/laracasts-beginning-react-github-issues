@@ -6,7 +6,7 @@ import styles from './IssueComments.module.css';
 
 const IssueComments: FC<IssueCommentsProps> = ({issue}) => {
     return (
-        <Link to={`/issues/1`} className={styles.commentsCountContainer}>
+        <Link to={`/issues/${issue.number}`} className={styles.commentsCountContainer}>
             <IconComments/>
             <div className={styles.commentsCount}>{issue.comments}</div>
         </Link>

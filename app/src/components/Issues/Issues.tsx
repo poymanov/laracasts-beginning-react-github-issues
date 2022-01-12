@@ -51,7 +51,7 @@ const Issues: FC = () => {
             {isSuccess && (
                 <div className="issues-container">
                     <div className={styles.issuesHeading}>
-                        <a href="#">facebook / create-react-app</a>
+                        <a href="https://github.com/facebook/create-react-app">facebook / create-react-app</a>
                         <Filter
                             filter={filter}
                             setFilter={setFilter}

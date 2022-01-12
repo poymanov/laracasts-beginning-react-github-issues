@@ -1,0 +1,14 @@
+.issueDetails {
+    font-size: 14px;
+    margin-top: 12px;
+    color: #374151;
+}
+
+.issueDetails a {
+    color: #374151;
+    font-weight: bold;
+}
+
+.issueDetails a:hover {
+    color: #0265d6;
+}

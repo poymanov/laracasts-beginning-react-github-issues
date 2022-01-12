@@ -1,0 +1,18 @@
+.commentsContainer {
+    margin-top: 48px;
+}
+
+.commentsContainer h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.commentsContainer h2 span {
+    color: #374151;
+    font-weight: normal;
+}
+
+.border {
+    padding-top: 32px;
+    border-bottom: 1px solid #F3F4F6;
+}

@@ -6,5 +6,6 @@ export interface Issue {
     comments: number,
     created_at: string,
     user: IssueUser,
-    state: string
+    state: string,
+    body: string
 }
