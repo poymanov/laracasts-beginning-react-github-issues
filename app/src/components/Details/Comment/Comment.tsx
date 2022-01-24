@@ -1,10 +1,10 @@
 import {formatDistance} from 'date-fns';
 import ReactMarkdown from 'react-markdown';
 import {FC} from "react";
-import {IssueCommentProps} from "./IssueComment.props";
-import styles from './IssueComment.module.css'
+import {CommentProps} from "./Comment.props";
+import styles from './Comment.module.css'
 
-const IssueComment: FC<IssueCommentProps> = ({user, createdAt, body}) => {
+const Comment: FC<CommentProps> = ({user, createdAt, body}) => {
     return (
         <div className={styles.commentContainer}>
             <a href={user.html_url}>
@@ -25,4 +25,4 @@ const IssueComment: FC<IssueCommentProps> = ({user, createdAt, body}) => {
     );
 }
 
-export default IssueComment;
+export default Comment;

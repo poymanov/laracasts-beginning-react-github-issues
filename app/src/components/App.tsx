@@ -1,7 +1,7 @@
 import React from 'react';
-import Issues from './Issues/Issues';
 import {Link, Route, Routes, BrowserRouter as Router} from 'react-router-dom';
-import Details from "./Details/Details";
+import IndexPage from "../pages/IndexPage";
+import DetailsPage from "../pages/DetailsPage";
 
 const App = () => {
     return (
@@ -16,8 +16,8 @@ const App = () => {
                 </nav>
                 <div className="container">
                     <Routes>
-                        <Route key="/" path="/" element={<Issues/>}/>
-                        <Route key="details" path="/issues/:id" element={<Details/>}/>
+                        <Route key="/" path="/" element={<IndexPage/>}/>
+                        <Route key="details" path="/issues/:id" element={<DetailsPage/>}/>
                     </Routes>
                 </div>
             </>

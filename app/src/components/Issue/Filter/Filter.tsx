@@ -1,5 +1,5 @@
-import IconOpen from '../Icons/IconOpen/IconOpen';
-import IconClosed from '../Icons/IconClosed/IconClosed';
+import IconOpen from '../../Icons/IconOpen/IconOpen';
+import IconClosed from '../../Icons/IconClosed/IconClosed';
 import {FilterProps} from "./Filter.props";
 import {FC} from "react";
 import styles from './Filter.module.css';

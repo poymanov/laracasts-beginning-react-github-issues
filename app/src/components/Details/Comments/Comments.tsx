@@ -1,10 +1,10 @@
 import {useQuery} from 'react-query';
-import IssueComment from './IssueComment';
+import Comment from '../Comment/Comment';
 import {FC} from "react";
-import {IssueCommentsProps} from "./IssueComments.props";
-import {IComment} from "../../interfaces/comment.interface";
+import {CommentsProps} from "./Comments.props";
+import {IComment} from "../../../interfaces/comment.interface";
 
-const IssueComments: FC<IssueCommentsProps> = ({issue}) => {
+const Comments: FC<CommentsProps> = ({issue}) => {
     const {
         isLoading,
         isSuccess,
@@ -23,9 +23,9 @@ const IssueComments: FC<IssueCommentsProps> = ({issue}) => {
             {isSuccess && (
                 <>
                     {comments && comments.map(comment => (
-                        <IssueComment user={comment.user}
-                                      createdAt={comment.created_at}
-                                      body={comment.body}/>
+                        <Comment user={comment.user}
+                                 createdAt={comment.created_at}
+                                 body={comment.body}/>
                     ))}
                 </>
             )}
@@ -33,4 +33,4 @@ const IssueComments: FC<IssueCommentsProps> = ({issue}) => {
     );
 }
 
-export default IssueComments;
+export default Comments;

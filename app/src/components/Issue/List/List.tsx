@@ -1,13 +1,13 @@
 import {useQuery} from 'react-query';
 import {FC, useState} from 'react';
-import Filter from './Filter';
-import IssueItem from './IssueItem/IssueItem';
-import {Issue} from "../../interfaces/issue.interface";
-import {IssuesOpen} from "../../interfaces/issuesOpen.interface";
-import {IssuesClosed} from "../../interfaces/issuesClosed.interface";
-import styles from './Issues.module.css';
+import Filter from '../Filter/Filter';
+import Item from '../Item/Item/Item';
+import {Issue} from "../../../interfaces/issue.interface";
+import {IssuesOpen} from "../../../interfaces/issuesOpen.interface";
+import {IssuesClosed} from "../../../interfaces/issuesClosed.interface";
+import styles from './List.module.css';
 
-const Issues: FC = () => {
+const List: FC = () => {
     const [filter, setFilter] = useState('open');
 
     const {
@@ -62,7 +62,7 @@ const Issues: FC = () => {
                         />
                     </div>
                     <div className="issues-table">
-                        {issues && issues.map(issue => <IssueItem key={issue.number} issue={issue}/>)}
+                        {issues && issues.map(issue => <Item key={issue.number} issue={issue}/>)}
                     </div>
                 </div>
             )}
@@ -70,4 +70,4 @@ const Issues: FC = () => {
     );
 };
 
-export default Issues;
+export default List;

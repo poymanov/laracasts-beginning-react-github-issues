@@ -1,9 +1,9 @@
 import {FC} from 'react';
 import { formatDistance } from 'date-fns';
-import {IssueTitleProps} from './IssueTitle.props';
-import styles from './IssueTitle.module.css'
+import {TitleProps} from './Title.props';
+import styles from './Title.module.css'
 
-const IssueTitle: FC<IssueTitleProps> = ({ issue }) => {
+const Title: FC<TitleProps> = ({ issue }) => {
     return (
         <>
             <h2>
@@ -19,4 +19,4 @@ const IssueTitle: FC<IssueTitleProps> = ({ issue }) => {
     );
 }
 
-export default IssueTitle;
+export default Title;

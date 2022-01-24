@@ -1,5 +1,5 @@
 import {Issue} from "../../../interfaces/issue.interface";
 
-export interface IssueTitleProps {
+export interface CommentsProps {
     issue: Issue
 }

@@ -1,10 +1,10 @@
 import {Link} from 'react-router-dom';
 import {formatDistance} from 'date-fns';
-import {IssueTitleProps} from "./IssueTitleProps.props";
+import {IssueTitleProps} from "./TitleProps.props";
 import {FC} from "react";
-import styles from './IssueTitle.module.css';
+import styles from './Title.module.css';
 
-const IssueTitle: FC<IssueTitleProps> = ({issue}) => {
+const Title: FC<IssueTitleProps> = ({issue}) => {
     return (
         <div className={styles.issuesTitle}>
             <Link to={`/issues/${issue.number}`}>{issue.title}</Link>
@@ -19,4 +19,4 @@ const IssueTitle: FC<IssueTitleProps> = ({issue}) => {
     );
 }
 
-export default IssueTitle;
+export default Title;

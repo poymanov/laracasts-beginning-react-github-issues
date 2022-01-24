@@ -1,5 +1,5 @@
-import {IssuesOpen} from "../../interfaces/issuesOpen.interface";
-import {IssuesClosed} from "../../interfaces/issuesClosed.interface";
+import {IssuesOpen} from "../../../interfaces/issuesOpen.interface";
+import {IssuesClosed} from "../../../interfaces/issuesClosed.interface";
 
 export interface FilterProps {
     filter: string,

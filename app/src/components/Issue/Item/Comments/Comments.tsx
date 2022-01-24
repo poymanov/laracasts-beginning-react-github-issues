@@ -1,10 +1,10 @@
 import {Link} from 'react-router-dom';
-import IconComments from '../../Icons/IconComments';
-import {IssueCommentsProps} from "./IssueComments.props";
+import IconComments from '../../../Icons/IconComments';
+import {CommentsProps} from "./Comments.props";
 import {FC} from "react";
-import styles from './IssueComments.module.css';
+import styles from './Comments.module.css';
 
-const IssueComments: FC<IssueCommentsProps> = ({issue}) => {
+const Comments: FC<CommentsProps> = ({issue}) => {
     return (
         <Link to={`/issues/${issue.number}`} className={styles.commentsCountContainer}>
             <IconComments/>
@@ -13,4 +13,4 @@ const IssueComments: FC<IssueCommentsProps> = ({issue}) => {
     );
 }
 
-export default IssueComments;
+export default Comments;

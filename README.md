@@ -1,4 +1,4 @@
-# Github Issues
+# Github List
 
 *WIP*
 
