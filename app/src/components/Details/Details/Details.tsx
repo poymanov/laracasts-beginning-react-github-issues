@@ -7,6 +7,7 @@ import {FC} from "react";
 import '../../../css/github-markdown.css';
 import {Issue} from '../../../interfaces/issue.interface';
 import styles from './Details.module.css';
+import {getIssueByNumberUrl} from "../../../helpers/Helpers";
 
 const Details: FC = () => {
     const params = useParams();
@@ -18,9 +19,11 @@ const Details: FC = () => {
     } = useQuery(['issue', params.id], fetchIssue);
 
     function fetchIssue(): Promise<Issue> {
-        return fetch(
-            `https://api.github.com/repos/facebook/create-react-app/issues/${params.id}`
-        ).then(response => response.json());
+        if (params.id === undefined) {
+            throw new Error();
+        }
+
+        return fetch(getIssueByNumberUrl(params.id)).then(response => response.json());
     }
 
     return (

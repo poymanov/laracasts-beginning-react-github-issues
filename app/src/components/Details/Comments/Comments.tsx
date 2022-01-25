@@ -3,6 +3,7 @@ import Comment from '../Comment/Comment';
 import {FC} from "react";
 import {CommentsProps} from "./Comments.props";
 import {IComment} from "../../../interfaces/comment.interface";
+import {getIssuesCommentsByNumberUrl} from "../../../helpers/Helpers";
 
 const Comments: FC<CommentsProps> = ({issue}) => {
     const {
@@ -12,9 +13,7 @@ const Comments: FC<CommentsProps> = ({issue}) => {
     } = useQuery(['comments', issue.number], fetchComments);
 
     function fetchComments(): Promise<IComment[]> {
-        return fetch(
-            `https://api.github.com/repos/facebook/create-react-app/issues/${issue.number}/comments`
-        ).then(response => response.json());
+        return fetch(getIssuesCommentsByNumberUrl(issue.number)).then(response => response.json());
     }
 
     return (

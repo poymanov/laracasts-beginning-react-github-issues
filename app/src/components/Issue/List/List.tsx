@@ -6,6 +6,7 @@ import {Issue} from "../../../interfaces/issue.interface";
 import {IssuesOpen} from "../../../interfaces/issuesOpen.interface";
 import {IssuesClosed} from "../../../interfaces/issuesClosed.interface";
 import styles from './List.module.css';
+import {getClosedIssuesUrl, getGithubAuthor, getGithubRepository, getIssuesByStateUrl, getOpenIssuesUrl, getRepositoryUrl} from "../../../helpers/Helpers";
 
 const List: FC = () => {
     const [filter, setFilter] = useState('open');
@@ -27,21 +28,15 @@ const List: FC = () => {
     } = useQuery('issuesClosed', fetchIssuesClosed);
 
     function fetchIssues(): Promise<Issue[]> {
-        return fetch(
-            `https://api.github.com/repos/facebook/create-react-app/issues?per_page=10&state=${filter}`
-        ).then(response => response.json())
+        return fetch(getIssuesByStateUrl(filter)).then(response => response.json())
     }
 
     function fetchIssuesOpen(): Promise<IssuesOpen> {
-        return fetch(
-            `https://api.github.com/search/issues?q=repo:facebook/create-react-app+type:issue+state:open&per_page=1`
-        ).then(response => response.json())
+        return fetch(getOpenIssuesUrl()).then(response => response.json())
     }
 
-    function fetchIssuesClosed(): Promise<IssuesClosed>  {
-        return fetch(
-            `https://api.github.com/search/issues?q=repo:facebook/create-react-app+type:issue+state:closed&per_page=1`
-        ).then(response => response.json())
+    function fetchIssuesClosed(): Promise<IssuesClosed> {
+        return fetch(getClosedIssuesUrl()).then(response => response.json())
     }
 
     return (
@@ -51,7 +46,7 @@ const List: FC = () => {
             {isSuccess && (
                 <div className="issues-container">
                     <div className={styles.issuesHeading}>
-                        <a href="https://github.com/facebook/create-react-app">facebook / create-react-app</a>
+                        <a href={getRepositoryUrl()}>{getGithubAuthor()} / {getGithubRepository()}</a>
                         <Filter
                             filter={filter}
                             setFilter={setFilter}
